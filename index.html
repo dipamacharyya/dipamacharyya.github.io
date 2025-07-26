@@ -31,8 +31,8 @@
   <style>
     .theme-toggle-btn {
       background: transparent;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      color: white;
+      border: 2px solid rgba(55, 81, 126, 0.3);
+      color: #37517e;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -44,23 +44,106 @@
     }
     
     .theme-toggle-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.5);
+      background: rgba(55, 81, 126, 0.1);
+      border-color: rgba(55, 81, 126, 0.5);
       transform: scale(1.1);
     }
     
     .theme-toggle-btn:focus {
       outline: none;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+      box-shadow: 0 0 0 2px rgba(55, 81, 126, 0.3);
     }
-    
-    @media (max-width: 768px) {
-      .header-controls {
-        margin-left: auto;
+
+    /* Mobile menu styles */
+    .mobile-nav-toggle {
+      color: #37517e;
+      font-size: 28px;
+      cursor: pointer;
+      display: none;
+      line-height: 0;
+      transition: 0.5s;
+    }
+
+    .mobile-nav-toggle.bi-x {
+      color: #fff;
+    }
+
+    @media (max-width: 991px) {
+      .mobile-nav-toggle {
+        display: block;
       }
-      
+
       .nav-menu {
+        position: fixed;
+        background: #37517e;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        transition: 0.3s;
+        z-index: 999;
+      }
+
+      .nav-menu.active {
+        right: 0;
+      }
+
+      .nav-menu ul {
+        display: block;
+        padding: 20px 0;
+        margin-top: 60px;
+      }
+
+      .nav-menu ul li {
+        float: none;
+        width: 100%;
+      }
+
+      .nav-menu ul li a {
+        display: block;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 16px;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .nav-menu ul li a:hover {
+        color: #ffc451;
+      }
+
+      .mobile-theme-toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .mobile-theme-toggle:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(255, 255, 255, 0.5);
+      }
+
+      .theme-toggle-btn {
         display: none !important;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .mobile-nav-toggle,
+      .mobile-theme-toggle {
+        display: none;
       }
     }
     
@@ -88,15 +171,27 @@
       color: #007bff;
     }
     
-    .dark-mode .get-started-btn {
-      background: #007bff;
-      color: white;
-      border: 2px solid #007bff;
+    .contact-card {
+      max-width: 600px;
+      margin: 0 auto;
     }
     
-    .dark-mode .get-started-btn:hover {
-      background: #0056b3;
-      border-color: #0056b3;
+    .footer-content {
+      padding: 40px 0;
+    }
+    
+    .email-link {
+      font-size: 24px;
+      font-weight: 700;
+      color: #007bff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .email-link:hover {
+      color: #0056b3;
+      text-decoration: none;
+      transform: scale(1.05);
     }
     
     .dark-mode #hero {
@@ -174,43 +269,30 @@
       color: #b0b0b0;
     }
     
-    .dark-mode .contact .info {
-      background: #2d2d2d;
-      border: 1px solid #444;
+    .dark-mode .contact-card .border {
+      border-color: #444 !important;
+      background-color: #2d2d2d !important;
     }
     
-    .dark-mode .contact .info h4 {
+    .dark-mode .contact-card {
+      background-color: #2d2d2d !important;
+    }
+    
+    .dark-mode .contact-card .p-4 {
+      background-color: #2d2d2d !important;
+    }
+    
+    .dark-mode .contact-card h4 {
       color: #e0e0e0;
     }
     
-    .dark-mode .contact .info p {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .contact .info a {
-      color: #007bff;
-    }
-    
-    .dark-mode .contact .info a:hover {
-      color: #0056b3;
+    .dark-mode .shadow-sm {
+      box-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.075) !important;
     }
     
     .dark-mode #footer {
       background: #0f0f0f;
       color: #e0e0e0;
-    }
-    
-    .dark-mode #footer .footer-top,
-    .dark-mode #footer .footer-bottom {
-      background: #0f0f0f;
-    }
-    
-    .dark-mode #footer .footer-contact h3 {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode #footer .footer-contact p {
-      color: #b0b0b0;
     }
     
     .dark-mode .credits a {
@@ -223,6 +305,33 @@
     }
     
     .dark-mode .theme-toggle-btn:hover {
+      background: rgba(224, 224, 224, 0.1);
+      border-color: rgba(224, 224, 224, 0.5);
+    }
+
+    .dark-mode .mobile-nav-toggle {
+      color: #e0e0e0;
+    }
+
+    .dark-mode .nav-menu {
+      background: #1a1a1a;
+    }
+
+    .dark-mode .nav-menu ul li a {
+      color: #e0e0e0;
+      border-bottom-color: rgba(224, 224, 224, 0.1);
+    }
+
+    .dark-mode .nav-menu ul li a:hover {
+      color: #007bff;
+    }
+
+    .dark-mode .mobile-theme-toggle {
+      border-color: rgba(224, 224, 224, 0.3);
+      color: #e0e0e0;
+    }
+
+    .dark-mode .mobile-theme-toggle:hover {
       background: rgba(224, 224, 224, 0.1);
       border-color: rgba(224, 224, 224, 0.5);
     }
@@ -243,14 +352,17 @@
           <li><a href="#about">About</a></li>
           <li><a href="#sectors">Sectors</a></li>
           <li><a href="#contact">Contact</a></li>
-       </ul>
+        </ul>
+        <button class="mobile-theme-toggle" id="mobile-theme-toggle">
+          <i class="icofont-moon" id="mobile-theme-icon"></i>
+        </button>
       </nav><!-- .nav-menu -->
 
-      <div class="header-controls d-flex align-items-center">
-        <a href="#about" class="get-started-btn scrollto mr-3">Get Started</a>
-        <button id="theme-toggle" class="theme-toggle-btn">
+      <div class="d-flex align-items-center">
+        <button id="theme-toggle" class="theme-toggle-btn d-none d-lg-flex">
           <i class="icofont-moon" id="theme-icon"></i>
         </button>
+        <i class="icofont-navigation-menu mobile-nav-toggle d-lg-none"></i>
       </div>
 
     </div>
@@ -436,38 +548,19 @@
         <div class="section-title">
           <h2>Contact Our Team</h2>
           <p>Ready to unlock Asian markets for your North American technology company? Connect with our strategic partnerships team to explore go-to-market opportunities.</p>
+          <p class="text-muted mt-3">Supported by our network of industry advisors and strategic partners</p>
         </div>
 
-        <div class="row">
+        <div class="row justify-content-center">
           <div class="col-lg-6">
-            <div class="info">
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Strategic Partnerships:</h4>
-                <p><a href="mailto:dipam@taiyoml.com">Dipam Acharyya, Director Strategic Partnerships</a></p>
-                <p>dipam@taiyoml.com</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="info">
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>Indian Operations:</h4>
-                <p><a href="mailto:vinod@catalystfund.com">Mr. Vinod Bengani, Managing Partner</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt-4">
-          <div class="col-lg-12">
-            <div class="info text-center">
-              <div class="email">
-                <i class="icofont-envelope"></i>
-                <h4>General Inquiries:</h4>
-                <p><a href="mailto:info@catalystfund.com">info@catalystfund.com</a></p>
+            <div class="info contact-card">
+              <div class="email text-center p-4 border rounded shadow-sm">
+                <i class="icofont-envelope mb-3" style="font-size: 3rem; color: #007bff;"></i>
+                <h4 class="mb-3">Director of Strategic Partnerships</h4>
+                <div class="contact-name mb-2">
+                  <a href="mailto:dipam@taiyoml.com" class="email-link">Dipam Acharyya</a>
+                </div>
+                <div class="text-muted">dipam@taiyoml.com</div>
               </div>
             </div>
           </div>
@@ -480,20 +573,20 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="footer-top">
+    <div class="footer-top footer-content">
       <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom clearfix">
-      <div class="credits">
-        <div class="col-lg-3 col-md-6 footer-contact">
-          <h3>Catalyst Investment Fund</h3>
-          <p>A TaiyoML Company</p>
+      <div class="credits text-center">
+        <div class="mb-2">
+          <strong>CATALYST INVESTMENT FUND</strong><br>
+          <span class="text-muted">Owned and operated by TaiyoML</span>
         </div>
-        © 2024 <a href="https://catalystfund.com/">Catalyst Investment Fund</a>
+        © 2024 <a href="https://taiyoml.com/">TaiyoML</a>
       </div>
     </div>
   </footer><!-- End Footer -->
@@ -519,27 +612,58 @@
     // Dark mode toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
       const themeToggle = document.getElementById('theme-toggle');
+      const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
       const themeIcon = document.getElementById('theme-icon');
+      const mobileThemeIcon = document.getElementById('mobile-theme-icon');
       const body = document.body;
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+      const navMenu = document.querySelector('.nav-menu');
       
       // Check for saved theme preference or default to light mode
       const currentTheme = localStorage.getItem('theme') || 'light';
       if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
-        themeIcon.className = 'icofont-sun';
+        if (themeIcon) themeIcon.className = 'icofont-sun';
+        if (mobileThemeIcon) mobileThemeIcon.className = 'icofont-sun';
       }
       
-      themeToggle.addEventListener('click', function() {
+      function toggleTheme() {
         body.classList.toggle('dark-mode');
         
         if (body.classList.contains('dark-mode')) {
-          themeIcon.className = 'icofont-sun';
+          if (themeIcon) themeIcon.className = 'icofont-sun';
+          if (mobileThemeIcon) mobileThemeIcon.className = 'icofont-sun';
           localStorage.setItem('theme', 'dark');
         } else {
-          themeIcon.className = 'icofont-moon';
+          if (themeIcon) themeIcon.className = 'icofont-moon';
+          if (mobileThemeIcon) mobileThemeIcon.className = 'icofont-moon';
           localStorage.setItem('theme', 'light');
         }
-      });
+      }
+      
+      if (themeToggle) {
+        themeToggle.addEventListener('click', toggleTheme);
+      }
+      
+      if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+      }
+
+      // Mobile menu functionality
+      if (mobileNavToggle && navMenu) {
+        mobileNavToggle.addEventListener('click', function() {
+          navMenu.classList.toggle('active');
+          mobileNavToggle.classList.toggle('bi-x');
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+          link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            mobileNavToggle.classList.remove('bi-x');
+          });
+        });
+      }
     });
   </script>
 
