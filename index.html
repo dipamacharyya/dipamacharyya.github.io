@@ -17,108 +17,22 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
   <style>
-    :root {
-      --primary-color: #007bff;
-      --secondary-color: #6c757d;
-      --dark-bg: #1a1a1a;
-      --dark-card: #2d2d2d;
-      --dark-text: #e0e0e0;
-      --dark-muted: #b0b0b0;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: "Open Sans", sans-serif;
-      color: #444444;
-      transition: all 0.3s ease;
-    }
-
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-    }
-
-    a:hover {
-      color: #0056b3;
-      text-decoration: none;
-    }
-
-    /* Header Styles */
-    #header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 60px;
-      z-index: 997;
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid #eee;
-      transition: all 0.3s;
-    }
-
-    .logo {
-      font-size: 30px;
-      margin: 0;
-      padding: 0;
-      line-height: 1;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .logo a {
-      color: #37517e;
-    }
-
-    .nav-menu {
-      padding: 0;
-    }
-
-    .nav-menu * {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-
-    .nav-menu > ul > li {
-      position: relative;
-      white-space: nowrap;
-      float: left;
-    }
-
-    .nav-menu a {
-      display: block;
-      position: relative;
-      color: #37517e;
-      padding: 10px 15px;
-      transition: 0.3s;
-      text-decoration: none;
-      font-size: 16px;
-      font-weight: 500;
-    }
-
-    .nav-menu a:hover,
-    .nav-menu .active > a,
-    .nav-menu li:hover > a {
-      color: var(--primary-color);
-    }
-
     .theme-toggle-btn {
       background: transparent;
-      border: 2px solid rgba(55, 81, 126, 0.3);
-      color: #37517e;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      color: white;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -127,441 +41,33 @@
       justify-content: center;
       transition: all 0.3s ease;
       cursor: pointer;
-      font-size: 16px;
     }
     
     .theme-toggle-btn:hover {
-      background: rgba(55, 81, 126, 0.1);
-      border-color: rgba(55, 81, 126, 0.5);
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.5);
       transform: scale(1.1);
     }
     
     .theme-toggle-btn:focus {
       outline: none;
-      box-shadow: 0 0 0 2px rgba(55, 81, 126, 0.3);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
     }
-
-    /* Hero Section */
-    #hero {
-      width: 100%;
-      height: 80vh;
-      background: linear-gradient(45deg, #37517e, #007bff);
-      display: flex;
-      align-items: center;
-    }
-
-    #hero .container {
-      padding-top: 72px;
-    }
-
-    #hero h1 {
-      margin: 0;
-      font-size: 48px;
-      font-weight: 700;
-      line-height: 56px;
-      color: #fff;
-    }
-
-    #hero h2 {
-      color: rgba(255, 255, 255, 0.8);
-      margin-bottom: 50px;
-      font-size: 24px;
-      font-weight: 300;
-    }
-
-    .hero-img img {
-      width: 100%;
-      animation: up-down 2s ease-in-out infinite alternate-reverse both;
-    }
-
-    @keyframes up-down {
-      0% {
-        transform: translateY(10px);
+    
+    @media (max-width: 768px) {
+      .header-controls {
+        margin-left: auto;
       }
-      100% {
-        transform: translateY(-10px);
+      
+      .nav-menu {
+        display: none !important;
       }
     }
-
-    /* Sections */
-    section {
-      padding: 60px 0;
-      overflow: hidden;
-    }
-
-    .section-bg {
-      background-color: #f3f5fa;
-    }
-
-    .section-title {
-      text-align: center;
-      padding-bottom: 30px;
-    }
-
-    .section-title h2 {
-      font-size: 32px;
-      font-weight: bold;
-      margin-bottom: 20px;
-      padding-bottom: 20px;
-      position: relative;
-      color: #37517e;
-    }
-
-    .section-title h2::after {
-      content: "";
-      position: absolute;
-      display: block;
-      width: 50px;
-      height: 3px;
-      background: var(--primary-color);
-      bottom: 0;
-      left: calc(50% - 25px);
-    }
-
-    .section-title p {
-      margin-bottom: 0;
-    }
-
-    /* About Section */
-    .about .content {
-      padding-top: 30px;
-    }
-
-    .about .content h3 {
-      font-weight: 700;
-      font-size: 26px;
-      color: #37517e;
-    }
-
-    .about .content ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .about .content ul li {
-      padding-left: 28px;
-      position: relative;
-    }
-
-    .about .content ul li + li {
-      margin-top: 10px;
-    }
-
-    .about .content ul i {
-      position: absolute;
-      left: 0;
-      top: 2px;
-      font-size: 20px;
-      color: var(--primary-color);
-      line-height: 1;
-    }
-
-    .btn-learn-more {
-      padding: 12px 30px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 16px;
-      transition: all 0.3s;
-      display: inline-block;
-      margin-top: 20px;
-      background: var(--primary-color);
-      color: white;
-    }
     
-    .btn-learn-more:hover {
-      text-decoration: none;
-      transform: translateY(-2px);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      background: #0056b3;
-      color: white;
-    }
-
-    /* Sectors Section */
-    .why-us .content {
-      padding: 30px;
-      background: #37517e;
-      border-radius: 4px;
-      color: #fff;
-    }
-
-    .why-us .content h3 {
-      font-weight: 700;
-      font-size: 34px;
-      margin-bottom: 30px;
-    }
-
-    .why-us .content h5 {
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 30px;
-    }
-
-    .why-us .accordion-list {
-      padding: 0 30px 30px 30px;
-    }
-
-    .why-us .accordion-list * {
-      list-style: none;
-      padding: 0;
-    }
-
-    .why-us .accordion-list li + li {
-      margin-top: 15px;
-    }
-
-    .why-us .accordion-list li {
-      padding: 20px;
-      background: #fff;
-      border-radius: 4px;
-    }
-
-    .why-us .accordion-list a {
-      display: block;
-      position: relative;
-      font-family: "Poppins", sans-serif;
-      font-size: 16px;
-      line-height: 24px;
-      font-weight: 500;
-      padding-right: 30px;
-      outline: none;
-      cursor: pointer;
-    }
-
-    .why-us .accordion-list span {
-      color: var(--primary-color);
-      font-weight: 600;
-      font-size: 18px;
-      margin-right: 10px;
-    }
-
-    .why-us .accordion-list i {
-      font-size: 24px;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    .why-us .accordion-list p {
-      margin-bottom: 0;
-      padding: 10px 0 0 0;
-    }
-
-    .why-us .accordion-list .icon-show {
-      display: none;
-    }
-
-    .why-us .accordion-list a.collapsed {
-      color: #343a40;
-    }
-
-    .why-us .accordion-list a.collapsed:hover {
-      color: var(--primary-color);
-    }
-
-    .why-us .accordion-list a.collapsed .icon-show {
-      display: inline-block;
-    }
-
-    .why-us .accordion-list a.collapsed .icon-close {
-      display: none;
-    }
-
-    /* Value Proposition Section */
-    .services .icon-box {
-      box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
-      padding: 50px 30px;
-      transition: all ease-in-out 0.4s;
-      background: #fff;
-    }
-
-    .services .icon-box .icon {
-      margin: 0 auto;
-      width: 100px;
-      height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: ease-in-out 0.3s;
-      position: relative;
-    }
-
-    .services .icon-box .icon i {
-      font-size: 36px;
-      transition: 0.5s;
-      position: relative;
-    }
-
-    .services .icon-box .icon svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-
-    .services .icon-box .icon svg path {
-      transition: 0.5s;
-      fill: #f5f5f5;
-    }
-
-    .services .icon-box h4 {
-      font-weight: 600;
-      margin: 10px 0 15px 0;
-      font-size: 18px;
-    }
-
-    .services .icon-box h4 a {
-      color: #37517e;
-      transition: ease-in-out 0.3s;
-    }
-
-    .services .icon-box p {
-      line-height: 24px;
-      font-size: 14px;
-      margin-bottom: 0;
-    }
-
-    .services .icon-box:hover {
-      transform: translateY(-10px);
-    }
-
-    .services .icon-box:hover .icon {
-      background: var(--primary-color);
-    }
-
-    .services .icon-box:hover .icon i {
-      color: #fff;
-    }
-
-    .services .icon-box:hover h4 a,
-    .services .icon-box:hover p {
-      color: var(--primary-color);
-    }
-
-    /* Contact Section */
-    .contact .info {
-      border-top: 3px solid var(--primary-color);
-      border-bottom: 3px solid var(--primary-color);
-      padding: 30px;
-      background: #fff;
-      width: 100%;
-      box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
-    }
-
-    .contact .info i {
-      font-size: 20px;
-      color: var(--primary-color);
-      float: left;
-      width: 44px;
-      height: 44px;
-      background: #eef7ff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50px;
-      transition: all 0.3s ease-in-out;
-    }
-
-    .contact .info h4 {
-      padding: 0 0 0 60px;
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 5px;
-      color: #37517e;
-    }
-
-    .contact .info p {
-      padding: 0 0 10px 60px;
-      margin-bottom: 20px;
-      font-size: 14px;
-      color: #6182ba;
-    }
-
-    .contact .email p {
-      padding-top: 5px;
-    }
-
-    .contact-card {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-    
-    .email-link {
-      font-size: 24px;
-      font-weight: 700;
-      color: #007bff;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    
-    .email-link:hover {
-      color: #0056b3;
-      text-decoration: none;
-      transform: scale(1.05);
-    }
-
-    /* Footer */
-    #footer {
-      padding: 15px;
-      color: #f4f6fd;
-      font-size: 14px;
-      position: relative;
-      background: #37517e;
-    }
-
-    #footer .footer-top {
-      padding: 60px 0 30px 0;
-      background: #37517e;
-    }
-
-    #footer .footer-bottom {
-      padding-top: 30px;
-      border-top: 1px solid #8ea2e0;
-    }
-
-    #footer .credits {
-      padding-top: 5px;
-      font-size: 13px;
-      color: #eaecf7;
-    }
-
-    #footer .credits a {
-      color: var(--primary-color);
-    }
-
-    .back-to-top {
-      position: fixed;
-      visibility: hidden;
-      opacity: 0;
-      right: 15px;
-      bottom: 15px;
-      z-index: 996;
-      background: var(--primary-color);
-      width: 40px;
-      height: 40px;
-      border-radius: 50px;
-      transition: all 0.4s;
-    }
-
-    .back-to-top i {
-      font-size: 28px;
-      color: #fff;
-      line-height: 0;
-    }
-
-    .back-to-top:hover {
-      background: #0678e3;
-      color: #fff;
-    }
-
-    .back-to-top.active {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    /* Dark Mode Styles */
+    /* Dark mode styles */
     body.dark-mode {
-      background-color: var(--dark-bg);
-      color: var(--dark-text);
+      background-color: #1a1a1a;
+      color: #e0e0e0;
     }
     
     .dark-mode #header {
@@ -570,25 +76,36 @@
     }
     
     .dark-mode .logo a {
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode .nav-menu ul li a {
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode .nav-menu ul li a:hover,
     .dark-mode .nav-menu ul li.active a {
-      color: var(--primary-color);
+      color: #007bff;
+    }
+    
+    .dark-mode .get-started-btn {
+      background: #007bff;
+      color: white;
+      border: 2px solid #007bff;
+    }
+    
+    .dark-mode .get-started-btn:hover {
+      background: #0056b3;
+      border-color: #0056b3;
     }
     
     .dark-mode #hero {
-      background: linear-gradient(135deg, var(--dark-bg) 0%, #2d2d2d 100%);
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     }
     
     .dark-mode #hero h1,
     .dark-mode #hero h2 {
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode .section-bg {
@@ -597,79 +114,90 @@
     
     .dark-mode .about,
     .dark-mode .contact {
-      background-color: var(--dark-bg);
+      background-color: #1a1a1a;
     }
     
     .dark-mode .section-title h2 {
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode .section-title p {
-      color: var(--dark-muted);
+      color: #b0b0b0;
     }
     
     .dark-mode .content p,
     .dark-mode .content h3,
     .dark-mode .content h5 {
-      color: var(--dark-muted);
+      color: #b0b0b0;
     }
     
     .dark-mode .why-us .content {
-      background: var(--dark-card);
-      color: var(--dark-text);
+      background: #2d2d2d;
+      color: #e0e0e0;
     }
     
-    .dark-mode .why-us .accordion-list li {
-      background: var(--dark-card);
+    .dark-mode .accordion-list li {
+      background: #2d2d2d;
       border: 1px solid #444;
     }
     
-    .dark-mode .why-us .accordion-list a {
-      color: var(--dark-text);
+    .dark-mode .accordion-list li a {
+      color: #e0e0e0;
     }
     
-    .dark-mode .why-us .accordion-list a.collapsed {
-      color: var(--dark-muted);
+    .dark-mode .accordion-list li a:hover,
+    .dark-mode .accordion-list li a.collapse {
+      background: #007bff;
+      color: white;
     }
     
-    .dark-mode .why-us .accordion-list a:hover,
-    .dark-mode .why-us .accordion-list a.collapse {
-      color: var(--primary-color);
+    .dark-mode .accordion-list div {
+      background: #2d2d2d;
+      border: 1px solid #444;
+      border-top: none;
     }
     
-    .dark-mode .why-us .accordion-list p {
-      color: var(--dark-muted);
+    .dark-mode .accordion-list p {
+      color: #b0b0b0;
     }
     
-    .dark-mode .services .icon-box {
-      background: var(--dark-card);
+    .dark-mode .icon-box {
+      background: #2d2d2d;
       border: 1px solid #444;
     }
     
-    .dark-mode .services .icon-box h4 a {
-      color: var(--dark-text);
+    .dark-mode .icon-box h4 a {
+      color: #e0e0e0;
     }
     
-    .dark-mode .services .icon-box p {
-      color: var(--dark-muted);
+    .dark-mode .icon-box p {
+      color: #b0b0b0;
     }
     
     .dark-mode .contact .info {
-      background: var(--dark-card);
-      border-color: var(--primary-color);
+      background: #2d2d2d;
+      border: 1px solid #444;
     }
     
     .dark-mode .contact .info h4 {
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode .contact .info p {
-      color: var(--dark-muted);
+      color: #b0b0b0;
+    }
+    
+    .dark-mode .contact .info a {
+      color: #007bff;
+    }
+    
+    .dark-mode .contact .info a:hover {
+      color: #0056b3;
     }
     
     .dark-mode #footer {
       background: #0f0f0f;
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode #footer .footer-top,
@@ -677,70 +205,26 @@
       background: #0f0f0f;
     }
     
-    .dark-mode #footer .credits {
-      color: var(--dark-muted);
+    .dark-mode #footer .footer-contact h3 {
+      color: #e0e0e0;
     }
     
-    .dark-mode #footer .credits a {
-      color: var(--primary-color);
+    .dark-mode #footer .footer-contact p {
+      color: #b0b0b0;
+    }
+    
+    .dark-mode .credits a {
+      color: #007bff;
     }
     
     .dark-mode .theme-toggle-btn {
       border-color: rgba(224, 224, 224, 0.3);
-      color: var(--dark-text);
+      color: #e0e0e0;
     }
     
     .dark-mode .theme-toggle-btn:hover {
       background: rgba(224, 224, 224, 0.1);
       border-color: rgba(224, 224, 224, 0.5);
-    }
-
-    /* Responsive Design */
-    @media (max-width: 1366px) {
-      .why-us .accordion-list {
-        padding: 0 15px 30px 15px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      #header {
-        height: 60px;
-      }
-
-      #hero {
-        height: auto;
-        padding: 120px 0 60px 0;
-      }
-
-      #hero .container {
-        padding-top: 72px;
-      }
-
-      #hero h1 {
-        font-size: 32px;
-        line-height: 36px;
-      }
-
-      #hero h2 {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      .nav-menu {
-        display: none !important;
-      }
-
-      .header-controls {
-        margin-left: auto;
-      }
-
-      .why-us .content {
-        padding: 15px;
-      }
-
-      .why-us .accordion-list {
-        padding: 0 0 15px 0;
-      }
     }
   </style>
 </head>
@@ -748,10 +232,10 @@
 <body>
 
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
+  <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">Catalyst Fund</a></h1>
+<h1 class="logo mr-auto"><a href="index.html">Catalyst Fund</a></h1>
       
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -759,12 +243,13 @@
           <li><a href="#about">About</a></li>
           <li><a href="#sectors">Sectors</a></li>
           <li><a href="#contact">Contact</a></li>
-        </ul>
+       </ul>
       </nav><!-- .nav-menu -->
 
       <div class="header-controls d-flex align-items-center">
+        <a href="#about" class="get-started-btn scrollto mr-3">Get Started</a>
         <button id="theme-toggle" class="theme-toggle-btn">
-          <i class="fas fa-moon" id="theme-icon"></i>
+          <i class="icofont-moon" id="theme-icon"></i>
         </button>
       </div>
 
@@ -783,7 +268,7 @@
         </div>
 
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="https://via.placeholder.com/500x400/007bff/ffffff?text=Catalyst+Fund" class="img-fluid animated" alt="">
+          <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -807,7 +292,7 @@
 
              <br><br>
 
-		Our deep government connections and understanding of strategic programs enable fast-track market access while cutting through regulatory hurdles. We prioritize go-to-market strategies over manufacturing, helping companies establish sales channels and customer relationships first.
+		Our deep government connections and understanding of programs like ADITI enable fast-track market access while cutting through regulatory hurdles. We prioritize go-to-market strategies over manufacturing, helping companies establish sales channels and customer relationships first.
 		
 		<br><br>
 		
@@ -823,10 +308,10 @@
  
  <br><br>Our unique value proposition focuses on market entry and customer acquisition first, with optional manufacturing scale-up available for companies experiencing overwhelming demand.
             </p>
-            <ul>
-              <li><i class="fas fa-check-double"></i> Go-to-Market First Strategy</li> 
-              <li><i class="fas fa-check-double"></i> Regulatory & Government Access</li>  
-              <li><i class="fas fa-check-double"></i> Sales-Backed Joint Ventures</li>
+                        <ul>
+              <li><i class="ri-check-double-line"></i> Go-to-Market First Strategy</li> 
+              <li><i class="ri-check-double-line"></i> Regulatory & Government Access</li>  
+              <li><i class="ri-check-double-line"></i> Sales-Backed Joint Ventures</li>
             </ul>
  
           </div>
@@ -841,7 +326,7 @@
 
         <div class="row">
 
-          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch order-2 order-lg-1">
+          <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
 
             <div class="content">
             	<h3>Sector Focus</h3>
@@ -851,7 +336,7 @@
             <div class="accordion-list">
               <ul>
                 <li>
-                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Defense & Security <i class="fas fa-chevron-down icon-show"></i><i class="fas fa-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Defense & Security <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
                     <p>
                      Drones, optoelectronic surveillance, anti-intrusion systems, and government contract routes. Leveraging ADITI Scheme and direct access to defense procurement networks.
@@ -860,7 +345,7 @@
                 </li>
 
                 <li>
-                  <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Energy & Green Tech <i class="fas fa-chevron-down icon-show"></i><i class="fas fa-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Energy & Green Tech <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
                     <p>
                Smart grid, microgrid controls, energy storage solutions with emphasis on distributed sales and pilot programs through established utility partnerships.
@@ -869,7 +354,7 @@
                 </li>
 
                 <li>
-                  <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> Healthcare Technology <i class="fas fa-chevron-down icon-show"></i><i class="fas fa-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> Healthcare Technology <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
                     <p>
                      Devices for diagnostics, remote care, and telemedicine with established channel partners across hospitals, clinics, and healthcare networks.
@@ -878,7 +363,7 @@
                 </li>
 
                 <li>
-                  <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span> Industrial Technology <i class="fas fa-chevron-down icon-show"></i><i class="fas fa-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span> Industrial Technology <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
                     <p>
                      Automation, predictive ML, OT/Cybersecurity solutions leveraging industrial buyers and Public Sector Undertakings (PSUs) for rapid market penetration.
@@ -891,7 +376,7 @@
 
           </div>
 
-          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("https://via.placeholder.com/600x500/37517e/ffffff?text=Market+Focus"); background-size: cover; background-position: center;' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
+          <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img" style='background-image: url("assets/img/why-us.png");' data-aos="zoom-in" data-aos-delay="150">&nbsp;</div>
         </div>
 
       </div>
@@ -909,7 +394,7 @@
         <div class="row">
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-rocket"></i></div>
+              <div class="icon"><i class="bx bx-rocket"></i></div>
               <h4><a href="">Market Entry</a></h4>
               <p>Go-to-market JVs and direct sales entities, not just manufacturing partnerships</p>
             </div>
@@ -917,7 +402,7 @@
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-building"></i></div>
+              <div class="icon"><i class="bx bx-building"></i></div>
               <h4><a href="">Government Access</a></h4>
               <p>Secure introductions, contract access, and tender facilitation leveraging programs like ADITI Scheme</p>
             </div>
@@ -925,7 +410,7 @@
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-shield-alt"></i></div>
+              <div class="icon"><i class="bx bx-shield-check"></i></div>
               <h4><a href="">Regulatory Navigation</a></h4>
               <p>Cut through India's complex regulatory environment using established relationships and compliance expertise</p>
             </div>
@@ -933,7 +418,7 @@
 
           <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
-              <div class="icon"><i class="fas fa-cogs"></i></div>
+              <div class="icon"><i class="bx bx-cog"></i></div>
               <h4><a href="">Scale to Production</a></h4>
               <p>Optional local manufacturing solutions available for companies with overwhelming market demand</p>
             </div>
@@ -951,19 +436,38 @@
         <div class="section-title">
           <h2>Contact Our Team</h2>
           <p>Ready to unlock Asian markets for your North American technology company? Connect with our strategic partnerships team to explore go-to-market opportunities.</p>
-          <p class="text-muted mt-3">Supported by our network of industry advisors and strategic partners</p>
         </div>
 
-        <div class="row justify-content-center">
+        <div class="row">
           <div class="col-lg-6">
-            <div class="info contact-card">
-              <div class="email text-center p-4 border rounded shadow-sm">
-                <i class="fas fa-envelope mb-3" style="font-size: 3rem; color: #007bff;"></i>
-                <h4 class="mb-3">Director of Strategic Partnerships</h4>
-                <div class="contact-name mb-2">
-                  <a href="mailto:dipam@taiyoml.com" class="email-link">Dipam Acharyya</a>
-                </div>
-                <div class="text-muted">dipam@taiyoml.com</div>
+            <div class="info">
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Strategic Partnerships:</h4>
+                <p><a href="mailto:dipam@taiyoml.com">Dipam Acharyya, Director Strategic Partnerships</a></p>
+                <p>dipam@taiyoml.com</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="info">
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Indian Operations:</h4>
+                <p><a href="mailto:vinod@catalystfund.com">Mr. Vinod Bengani, Managing Partner</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <div class="col-lg-12">
+            <div class="info text-center">
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>General Inquiries:</h4>
+                <p><a href="mailto:info@catalystfund.com">info@catalystfund.com</a></p>
               </div>
             </div>
           </div>
@@ -978,29 +482,39 @@
   <footer id="footer">
     <div class="footer-top">
       <div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
         </div>
       </div>
     </div>
 
     <div class="container footer-bottom clearfix">
-      <div class="credits text-center">
-        <div class="mb-2">
-          <strong>CATALYST INVESTMENT FUND</strong><br>
-          <span class="text-muted">Owned and operated by TaiyoML</span>
+      <div class="credits">
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>Catalyst Investment Fund</h3>
+          <p>A TaiyoML Company</p>
         </div>
-        © 2024 <a href="https://taiyoml.com/">TaiyoML</a>
+        © 2024 <a href="https://catalystfund.com/">Catalyst Investment Fund</a>
       </div>
     </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="fas fa-arrow-up"></i></a>
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
 
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  
   <script>
     // Dark mode toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
@@ -1012,96 +526,19 @@
       const currentTheme = localStorage.getItem('theme') || 'light';
       if (currentTheme === 'dark') {
         body.classList.add('dark-mode');
-        themeIcon.className = 'fas fa-sun';
+        themeIcon.className = 'icofont-sun';
       }
       
       themeToggle.addEventListener('click', function() {
         body.classList.toggle('dark-mode');
         
         if (body.classList.contains('dark-mode')) {
-          themeIcon.className = 'fas fa-sun';
+          themeIcon.className = 'icofont-sun';
           localStorage.setItem('theme', 'dark');
         } else {
-          themeIcon.className = 'fas fa-moon';
+          themeIcon.className = 'icofont-moon';
           localStorage.setItem('theme', 'light');
         }
-      });
-
-      // Initialize AOS
-      AOS.init({
-        duration: 1000,
-        easing: "ease-in-out",
-        once: true,
-        mirror: false
-      });
-
-      // Back to top button
-      let backtotop = document.querySelector('.back-to-top');
-      if (backtotop) {
-        const toggleBacktotop = () => {
-          if (window.scrollY > 100) {
-            backtotop.classList.add('active');
-          } else {
-            backtotop.classList.remove('active');
-          }
-        }
-        window.addEventListener('load', toggleBacktotop);
-        document.addEventListener('scroll', toggleBacktotop);
-      }
-
-      // Smooth scrolling for anchor links
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          const target = document.querySelector(this.getAttribute('href'));
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-          }
-        });
-      });
-
-      // Header scroll effect
-      const selectHeader = document.querySelector('#header');
-      if (selectHeader) {
-        const headerScrolled = () => {
-          if (window.scrollY > 100) {
-            selectHeader.classList.add('header-scrolled');
-          } else {
-            selectHeader.classList.remove('header-scrolled');
-          }
-        }
-        window.addEventListener('load', headerScrolled);
-        document.addEventListener('scroll', headerScrolled);
-      }
-
-      // Accordion functionality
-      document.querySelectorAll('.accordion-list a').forEach(item => {
-        item.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          const target = document.querySelector(this.getAttribute('href'));
-          const parent = this.closest('.accordion-list');
-          
-          // Close all other accordions
-          parent.querySelectorAll('.collapse.show').forEach(openItem => {
-            if (openItem !== target) {
-              openItem.classList.remove('show');
-              const trigger = parent.querySelector(`a[href="#${openItem.id}"]`);
-              if (trigger) {
-                trigger.classList.add('collapsed');
-              }
-            }
-          });
-          
-          // Toggle current accordion
-          if (target) {
-            target.classList.toggle('show');
-            this.classList.toggle('collapsed');
-          }
-        });
       });
     });
   </script>
