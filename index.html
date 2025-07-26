@@ -54,6 +54,156 @@
     .footer-content {
       padding: 40px 0;
     }
+    
+    .email-link {
+      font-size: 24px;
+      font-weight: 700;
+      color: #007bff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .email-link:hover {
+      color: #0056b3;
+      text-decoration: none;
+      transform: scale(1.05);
+    }
+    
+    .theme-toggle {
+      transition: all 0.3s ease;
+    }
+    
+    /* Dark mode styles */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #e0e0e0;
+    }
+    
+    .dark-mode #header {
+      background: rgba(26, 26, 26, 0.95);
+      border-bottom: 1px solid #333;
+    }
+    
+    .dark-mode .logo a {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .nav-menu ul li a {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .nav-menu ul li a:hover,
+    .dark-mode .nav-menu ul li.active a {
+      color: #007bff;
+    }
+    
+    .dark-mode #hero {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    }
+    
+    .dark-mode #hero h1,
+    .dark-mode #hero h2 {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .section-bg {
+      background-color: #242424;
+    }
+    
+    .dark-mode .about,
+    .dark-mode .contact {
+      background-color: #1a1a1a;
+    }
+    
+    .dark-mode .section-title h2 {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .section-title p {
+      color: #b0b0b0;
+    }
+    
+    .dark-mode .content p,
+    .dark-mode .content h5 {
+      color: #b0b0b0;
+    }
+    
+    .dark-mode .accordion-list li a {
+      background: #2d2d2d;
+      color: #e0e0e0;
+      border: 1px solid #444;
+    }
+    
+    .dark-mode .accordion-list li a:hover,
+    .dark-mode .accordion-list li a.collapse {
+      background: #007bff;
+      color: white;
+    }
+    
+    .dark-mode .accordion-list div {
+      background: #2d2d2d;
+      border: 1px solid #444;
+      border-top: none;
+    }
+    
+    .dark-mode .accordion-list p {
+      color: #b0b0b0;
+    }
+    
+    .dark-mode .icon-box {
+      background: #2d2d2d;
+      border: 1px solid #444;
+    }
+    
+    .dark-mode .icon-box h4 a {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .icon-box p {
+      color: #b0b0b0;
+    }
+    
+    .dark-mode .contact-card .border {
+      border-color: #444 !important;
+      background-color: #2d2d2d;
+    }
+    
+    .dark-mode .contact-card h4 {
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .shadow-sm {
+      box-shadow: 0 0.125rem 0.25rem rgba(255, 255, 255, 0.075) !important;
+    }
+    
+    .dark-mode #footer {
+      background: #0f0f0f;
+      color: #e0e0e0;
+    }
+    
+    .dark-mode .credits a {
+      color: #007bff;
+    }
+    
+    .dark-mode .get-started-btn {
+      background: #007bff;
+      border-color: #007bff;
+    }
+    
+    .dark-mode .get-started-btn:hover {
+      background: #0056b3;
+      border-color: #0056b3;
+    }
+    
+    .dark-mode .btn-learn-more {
+      background: #007bff;
+      color: white;
+    }
+    
+    .dark-mode .btn-learn-more:hover {
+      background: #0056b3;
+      color: white;
+    }
   </style>
 </head>
 
@@ -74,7 +224,14 @@
        </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <div class="d-flex align-items-center">
+        <div class="theme-toggle mr-3">
+          <button id="theme-toggle" class="btn btn-outline-secondary btn-sm">
+            <i class="icofont-moon" id="theme-icon"></i>
+          </button>
+        </div>
+        <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      </div>
 
     </div>
   </header><!-- End Header -->
@@ -265,11 +422,13 @@
         <div class="row justify-content-center">
           <div class="col-lg-6">
             <div class="info contact-card">
-              <div class="email text-center">
-                <i class="icofont-envelope"></i>
-                <h4>Director of Strategic Partnerships:</h4>
-                <p><a href="mailto:dipam@taiyoml.com" style="font-size: 20px; font-weight: 600; color: #007bff; text-decoration: underline;">Dipam Acharyya</a></p>
-                <small class="text-muted">Click to send email</small>
+              <div class="email text-center p-4 border rounded shadow-sm">
+                <i class="icofont-envelope mb-3" style="font-size: 3rem; color: #007bff;"></i>
+                <h4 class="mb-3">Director of Strategic Partnerships</h4>
+                <div class="contact-name mb-2">
+                  <a href="mailto:dipam@taiyoml.com" class="email-link">Dipam Acharyya</a>
+                </div>
+                <small class="text-muted">Click name to send email</small>
               </div>
             </div>
           </div>
