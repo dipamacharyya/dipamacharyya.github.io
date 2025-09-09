@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Catalyst Investment Fund - US-India Technology Joint Ventures for Manufacturing & Export</title>
-  <meta content="Strategic joint venture facilitation between US technology companies and Indian manufacturing partners. Non-dilutive capital for hardware-intensive technology scale-up with focus on renewables, defense, and export manufacturing." name="description">
-  <meta content="joint ventures, US India manufacturing, technology partnerships, renewables, defense manufacturing, export manufacturing, non-dilutive capital, hardware scaling" name="keywords">
+  <title>Catalyst Investment Fund - Unlocking Asian Markets for North American Technology</title>
+  <meta content="Strategic marketing partnerships and fast-track market access for North American technology companies in India & Southeast Asia. Government connections, regulatory expertise, and go-to-market focus." name="description">
+  <meta content="investment fund, venture capital, india market entry, southeast asia, technology partnerships, government access, regulatory navigation" name="keywords">
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,6 +20,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  
 
 <style>
     * {
@@ -32,7 +32,7 @@
       line-height: 1.6;
     }
 
-    /* Enhanced Hero Section */
+    /* Enhanced Hero Section - FIXED LAYOUT */
     #hero {
       width: 100%;
       height: 80vh;
@@ -40,12 +40,12 @@
       color: white;
       position: relative;
       overflow: hidden;
-      padding-top: 80px;
+      padding-top: 80px; /* Add top padding to account for fixed header */
     }
 
     #hero .container {
       position: relative;
-      z-index: 2;
+      z-index: 2; /* Ensure hero content is above background elements */
     }
 
     #hero h1 {
@@ -55,7 +55,7 @@
       line-height: 56px;
       color: #fff;
       position: relative;
-      z-index: 3;
+      z-index: 3; /* Ensure hero text is above sidebar */
     }
 
     #hero h2 {
@@ -64,78 +64,9 @@
       font-size: 24px;
       font-weight: 300;
       position: relative;
-      z-index: 3;
+      z-index: 3; /* Ensure hero text is above sidebar */
     }
-#hero {
-  background: #37517e;
-  min-height: 100vh;
-  padding: 80px 0;
-  position: relative;
-}
 
-#hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Ensure content doesn't get cut off */
-#hero .row {
-  min-height: calc(100vh - 160px);
-}
-
-/* Hero image positioning */
-.hero-img {
-  position: relative;
-}
-
-/* Mobile adjustments */
-@media (max-width: 991.98px) {
-  #hero {
-    padding: 60px 0;
-    min-height: auto;
-  }
-  
-  #hero .row {
-    min-height: auto;
-  }
-  
-  #hero .col-lg-6:first-child {
-    margin-bottom: 2rem;
-  }
-  
-  .hero-sidebar {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
-  }
-}
-
-/* Desktop specific adjustments */
-@media (min-width: 992px) {
-  #hero {
-    overflow: visible;
-  }
-  
-  .hero-sidebar {
-    background: rgba(55, 81, 126, 0.9);
-    color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    z-index: 3;
-  }
-  
-  .hero-sidebar h4 {
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-}
     .trust-badges {
       display: flex;
       flex-wrap: wrap;
@@ -143,7 +74,7 @@
       margin: 30px 0;
       align-items: center;
       position: relative;
-      z-index: 3;
+      z-index: 3; /* Ensure badges are above sidebar */
     }
 
     .trust-badge {
@@ -162,7 +93,7 @@
       margin-top: 30px;
       flex-wrap: wrap;
       position: relative;
-      z-index: 3;
+      z-index: 3; /* Ensure CTA buttons are above sidebar */
     }
 
     .btn-primary-cta {
@@ -211,6 +142,7 @@
       transform: translateY(-2px);
     }
 
+    /* FIXED: Hero sidebar positioning and z-index */
     .hero-sidebar {
       background: rgba(255,255,255,0.1);
       padding: 30px;
@@ -218,7 +150,7 @@
       backdrop-filter: blur(10px);
       margin-top: 30px;
       position: relative;
-      z-index: 1;
+      z-index: 1; /* Lower z-index so it stays behind hero text */
     }
 
     .hero-sidebar h4 {
@@ -285,26 +217,25 @@
     }
 
     .btn-learn-more {
-  background: #47b2e4 !important;
-  color: white !important;
-  padding: 12px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: all 0.3s;
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.btn-learn-more:hover {
-  background: #209dd8 !important;
-  text-decoration: none;
-  color: white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+      background: #47b2e4;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    
+    .btn-learn-more:hover {
+      background: #209dd8;
+      text-decoration: none;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
     /* Enhanced Sectors Section */
     #sectors {
@@ -368,121 +299,188 @@
       line-height: 1.5;
     }
 
-  /* Enhanced Contact Section */
-#contact {
-  padding: 80px 0;
-  background: #37517e;
-  color: white;
-}
+    /* Value Proposition Section */
+    .services {
+      padding: 80px 0;
+      background: #f3f5fa;
+    }
 
-#contact .section-title h2 {
-  color: white;
-}
+    .icon-box {
+      background: #fff;
+      border-radius: 10px;
+      padding: 40px 30px;
+      height: 100%;
+      box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
 
-#contact .section-title h2::before {
-  background: rgba(255, 255, 255, 0.2);
-}
+    .icon-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 20px 90px 0px rgba(110, 123, 131, 0.15);
+    }
 
-#contact .section-title h2::after {
-  background: #47b2e4;
-}
+    .icon-box .icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 5px;
+      background: #47b2e4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
+      margin: 0 auto 20px;
+    }
 
-#contact .section-title p {
-  color: rgba(255,255,255,0.8);
-}
+    .icon-box h4 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
 
-.contact-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 50px 40px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
+    .icon-box h4 a {
+      color: #37517e;
+      text-decoration: none;
+    }
 
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  transform: rotate(-45deg);
-  transition: all 0.6s ease;
-}
+    .icon-box p {
+      line-height: 24px;
+      font-size: 14px;
+      margin-bottom: 0;
+      color: #666;
+    }
 
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-  border-color: rgba(71, 178, 228, 0.5);
-}
+    /* Enhanced Contact Section - FIXED LAYOUT */
+    #contact {
+      padding: 80px 0;
+      background: #37517e;
+      color: white;
+    }
 
-.contact-card:hover::before {
-  transform: rotate(-45deg) translate(50%, 50%);
-}
+    #contact .section-title h2 {
+      color: white;
+    }
 
-#contact .info .contact-item {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 40px 30px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 1;
-  margin-bottom: 30px;
-}
+    #contact .section-title h2::before {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-#contact .info .contact-item i {
-  font-size: 48px;
-  color: #47b2e4;
-  margin-bottom: 20px;
-  background: rgba(71, 178, 228, 0.1);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(71, 178, 228, 0.2);
-}
+    #contact .section-title h2::after {
+      background: #47b2e4;
+    }
 
-#contact .info .contact-item h4 {
-  color: #ffffff !important;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 24px;
-}
+    #contact .section-title p {
+      color: rgba(255,255,255,0.8);
+    }
 
-#contact .info .contact-item p {
-  color: #ffffff !important;
-  margin-bottom: 12px;
-  font-size: 16px;
-  line-height: 1.6;
-}
+    /* FIXED: Contact card layout made fluid and beautiful */
+    .contact-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 50px 40px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-#contact .info .contact-item p strong {
-  color: #ffffff !important;
-  font-weight: 600;
-}
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      transform: rotate(-45deg);
+      transition: all 0.6s ease;
+    }
 
-#contact .info .contact-item a {
-  color: #47b2e4 !important;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+      border-color: rgba(71, 178, 228, 0.5);
+    }
 
-#contact .info .contact-item a:hover {
-  color: #ffffff !important;
-  text-decoration: none;
-}
+    .contact-card:hover::before {
+      transform: rotate(-45deg) translate(50%, 50%);
+    }
 
-    /* Header Enhancements */
+    .info .email {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 1;
+    }
+
+    .info .email i {
+      font-size: 48px;
+      color: #47b2e4;
+      margin-bottom: 20px;
+      background: rgba(71, 178, 228, 0.1);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(71, 178, 228, 0.2);
+    }
+
+    .info .email h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 24px;
+    }
+
+    .info .email p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .info .email a {
+      color: #47b2e4;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
+
+    .info .email a:hover {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Enhanced booking button in contact section */
+    .contact-card .btn-primary-cta {
+      background: linear-gradient(135deg, #47b2e4, #209dd8);
+      padding: 18px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 50px;
+      border: none;
+      box-shadow: 0 8px 25px rgba(71, 178, 228, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 25px;
+    }
+
+    .contact-card .btn-primary-cta:hover {
+      background: linear-gradient(135deg, #209dd8, #1a8bc4);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 35px rgba(71, 178, 228, 0.4);
+    }
+
+    /* FIXED: Header Enhancements and Get Started Button Alignment */
     #header {
       transition: all 0.5s;
       z-index: 997;
@@ -497,6 +495,7 @@
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
     }
 
+    /* FIXED: Header container alignment */
     #header .container {
       display: flex;
       align-items: center;
@@ -510,6 +509,7 @@
       text-decoration: none;
     }
 
+    /* FIXED: Navigation menu positioning */
     .nav-menu {
       margin: 0;
     }
@@ -542,6 +542,7 @@
       color: #47b2e4;
     }
 
+    /* FIXED: Get Started button alignment */
     .get-started-btn {
       background: #47b2e4;
       color: white;
@@ -580,7 +581,7 @@
       padding-bottom: 12px;
     }
 
-    /* Mobile Responsiveness */
+    /* FIXED: Mobile Responsiveness */
     @media (max-width: 991px) {
       #hero {
         height: auto;
@@ -599,6 +600,7 @@
         margin-bottom: 30px;
       }
 
+      /* FIXED: Mobile hero layout */
       #hero .row {
         flex-direction: column-reverse;
       }
@@ -626,6 +628,12 @@
         margin-right: auto;
       }
 
+      .hero-sidebar .approach-item {
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      /* Mobile header fixes */
       .nav-menu {
         display: none !important;
       }
@@ -636,9 +644,15 @@
         font-size: 13px;
       }
 
+      /* Mobile contact fixes */
       .contact-card {
         padding: 30px 25px;
         margin: 0 15px;
+      }
+
+      .contact-card .btn-primary-cta {
+        padding: 15px 30px;
+        font-size: 16px;
       }
     }
 
@@ -674,8 +688,49 @@
         font-size: 12px;
         padding: 6px 12px;
       }
+
+      .hero-sidebar {
+        padding: 15px;
+      }
+
+      .hero-sidebar h4 {
+        font-size: 16px;
+        margin-bottom: 15px;
+      }
+
+      .hero-sidebar .approach-item {
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+
+      /* Mobile contact responsive */
+      .contact-card {
+        padding: 25px 20px;
+        border-radius: 15px;
+      }
+
+      .info .email {
+        padding: 25px 20px;
+      }
+
+      .info .email i {
+        font-size: 36px;
+        width: 60px;
+        height: 60px;
+      }
+
+      .info .email h4 {
+        font-size: 20px;
+      }
+
+      .contact-card .btn-primary-cta {
+        padding: 12px 25px;
+        font-size: 14px;
+        border-radius: 25px;
+      }
     }
 
+    /* Additional mobile menu toggle (if needed) */
     .mobile-nav-toggle {
       color: #fff;
       font-size: 28px;
@@ -702,71 +757,69 @@
         <ul>
           <li class="active"><a href="index.html">Home</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="#sectors">Focus Areas</a></li>
-          <li><a href="#track-record">Value Add</a></li>
+          <li><a href="#sectors">Sectors</a></li>
+          <li><a href="#track-record">Track Record</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="get-started-btn scrollto">Get Started</a>
+      <a href="#about" class="get-started-btn scrollto">Get Started</a>
     </div>
   </header>
 
   <!-- ======= Enhanced Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-  <div class="container">
-    <!-- Move background image to CSS background instead of inline img -->
-    <div class="row align-items-center min-vh-100">
-      
-      <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-        <h1>Strategic US-India Technology Joint Venture</h1>
-        <h2>We facilitate partnerships between innovative US technology companies and established Indian manufacturing partners, enabling scale-up without dilution.</h2>
-
-        <div class="trust-badges">
-          <span class="trust-badge">🤝 Joint Venture Structuring</span>
-          <span class="trust-badge">🏭 Manufacturing Scale-Up</span>
-          <span class="trust-badge">💰 Non-Dilutive Capital</span>
-          <span class="trust-badge">🌍 Export Manufacturing</span>
-          <span class="trust-badge">🔋 Renewables Focus</span>
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- FIXED: Image moved to beginning/left side -->
+        <div class="col-lg-6 order-1 order-lg-1 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
+          
+          <div class="hero-sidebar">
+            <h4>Our Approach</h4>
+            <div class="approach-item">
+              <span>Strategy:</span>
+              <strong>✓ Go-to-Market First</strong>
+            </div>
+            <div class="approach-item">
+              <span>Access:</span>
+              <strong>✓ Government Connections</strong>
+            </div>
+            <div class="approach-item">
+              <span>Speed:</span>
+              <strong>✓ Fast-Track Entry</strong>
+            </div>
+            <div class="approach-item">
+              <span>Scale:</span>
+              <strong>✓ Optional Manufacturing</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="cta-buttons">
-          <a href="#contact" class="btn-primary-cta">
-            <i class="bx bx-phone"></i>
-            Schedule Partnership Call
-          </a>
-          <a href="#about" class="btn-secondary-cta">
-            <i class="bx bx-info-circle"></i>
-            About Catalyst
-          </a>
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+          <h1>Unlocking Asian Markets for North American Technology</h1>
+          <h2>Strategic marketing partnerships and fast-track market access for North American technology companies in India & Southeast Asia through government connections, regulatory expertise, and go-to-market focus.</h2>
+
+          <div class="trust-badges">
+            <span class="trust-badge">🏛️ Government Access Programs</span>
+            <span class="trust-badge">🚀 Fast-Track Market Entry</span>
+            <span class="trust-badge">🤝 Strategic JV Partnerships</span>
+            <span class="trust-badge">📊 ADITI Scheme Access</span>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="#contact" class="btn-primary-cta">
+              <i class="bx bx-phone"></i>
+              Book Strategy Call
+            </a>
+            <a href="#about" class="btn-secondary-cta">
+              <i class="bx bx-info-circle"></i>
+              Learn More
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-        <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
-        <div class="hero-sidebar">
-          <h4>Our JV Approach</h4>
-          <div class="approach-item">
-            <span>Timeline:</span>
-            <strong> 6-18 Weeks to JV</strong>
-          </div>
-          <div class="approach-item">
-            <span>Capital:</span>
-            <strong> Non-Dilutive Scaling</strong>
-          </div>
-          <div class="approach-item">
-            <span>Manufacturing:</span>
-            <strong> Cost-Effective Partners</strong>
-          </div>
-          <div class="approach-item">
-            <span>Export Capabilities:</span>
-            <strong> Global</strong>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
 
   <main id="main">
     <!-- ======= About Section ======= -->
@@ -774,60 +827,66 @@
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>About Catalyst</h2>
-          <p>Cross-border investment and facilitation platform orchestrating strategic joint ventures between US technology firms and Indian industrial partners</p>
+          <p>Cross-border venture platform specialized in launching and scaling North American technology companies across Asian markets</p>
         </div>
 
         <div class="row content">
           <div class="col-lg-6">
             <p>
-              Catalyst Investment Fund specializes in facilitating strategic joint ventures between innovative US technology companies and established Indian manufacturing and public sector partners. We're positioned to capitalize on India's anticipated industrial surge from $4T to $10T GDP.
-            </p>
-            <p>
-              Unlike traditional VCs, we combine market entry guidance, regulatory navigation, and manufacturing scale-up expertise with deep local connectivity. Our focus is on hardware and manufacturing-integrated technology partnerships—matching world-class US innovation with India's production capabilities and distribution networks.
+             Catalyst is a cross-border venture platform specialized in launching and scaling marketing for US technology companies in the Indian and broader Asian market. We focus on creating strategic marketing partnerships, including sales/distribution JVs, to unlock growth across defense, energy, healthcare, and industrial sectors.
+
+             <br><br>
+
+      Government connections and understanding of strategic programs enable fast-track market access while cutting through regulatory hurdles. We prioritize go-to-market strategies over manufacturing, helping companies establish sales channels and customer relationships first.
+      
+      <br><br>
+      
+      Our framework enables rapid market entry through established regulatory relationships, proof of concept deployment in weeks, and complete market penetration strategies tailored to each sector's unique requirements.
             </p>
           </div>
           <div class="col-lg-6 pt-4 pt-lg-0">
             <p>
-              We target US-based technology companies that are hardware-centric, IP-driven, and scale-up ready, but lack existing India operations. Our value proposition centers on partnership and capacity building rather than pure capital injection.
-            </p>
-            <p>
-              With operations centered in Kolkata & Delhi and strong nationwide manufacturing/PSU connections, we facilitate entry across India and Southeast Asia through cost-effective manufacturing partnerships and government contract access.
+              North American technology innovators face significant barriers when entering Asian markets - complex regulatory environments, unfamiliar buyer networks, and lengthy approval processes. <br><br>
+             
+             Catalyst bridges this gap through direct access to public sector and strategic buyers, streamlined by our regulatory connections and government-sponsored programs like ADITI for defense/security adoption and Make in India initiatives.
+
+             <br><br>Our unique value proposition focuses on market entry and customer acquisition first, with optional manufacturing scale-up available for companies experiencing overwhelming demand.
             </p>
             <ul>
-              <li><i class="ri-check-double-line"></i> Hardware-intensive technology focus</li>
-              <li><i class="ri-check-double-line"></i> Established manufacturing network</li>
-              <li><i class="ri-check-double-line"></i> Government & PSU access</li>
-              <li><i class="ri-check-double-line"></i> Non-dilutive scaling solutions</li>
+              <li><i class="ri-check-double-line"></i> Go-to-Market First Strategy</li>
+              <li><i class="ri-check-double-line"></i> Regulatory & Government Access</li>
+              <li><i class="ri-check-double-line"></i> Sales-Backed Joint Ventures</li>
             </ul>
-          <div style="margin-top: 30px;">
+            <!-- FIXED: Button moved to end of About section -->
+            <div style="margin-top: 30px;">
               <a href="#contact" class="btn-learn-more">
                 <i class="bx bx-phone" style="margin-right: 8px;"></i>
-                Discuss Your JV Opportunity
+                Book Strategy Call
               </a>
             </div>
-
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ======= Focus Areas Section ======= -->
+    <!-- ======= Sectors Section ======= -->
     <section id="sectors" class="why-us section-bg">
       <div class="container-fluid" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
             <div class="content">
-              <h3>Strategic Focus Areas</h3>
-              <h5>We concentrate on hardware-intensive sectors where US technology innovation meets India's manufacturing excellence and export potential, with particular emphasis on renewable energy solutions.</h5>
+              <h3>Sector Focus</h3>
+              <h5>We specialize in four key sectors where our government connections and market knowledge provide maximum advantage for North American technology companies.</h5>
             </div>
 
             <div class="accordion-list">
               <ul>
                 <li>
-                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Energy & Green Tech (Primary Focus) <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" class="collapse" href="#accordion-list-1"><span>01</span> Energy & Green Tech <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-1" class="collapse show" data-parent=".accordion-list">
                     <p>
-                      Inverters, Battery Management Systems (BMS),  Solar Racking & Tracking systems, Heat Transfer, Hydrogen Catalysts, Microgrid & Smart Grid Infrastructure, and more. Our interests remain wide as we leverage India's position as a global renewable energy manufacturing hub and export base, providing access to cost-effective production and Asia-wide distribution channels.
+                    
+               Solar racking and tracking systems, inverters, controller systems, heat transfer, smart grid, microgrid controls, energy storage solutions, hydrogen catalysts with emphasis on distributed sales and pilot programs through established utility partnerships.
                     </p>
                   </div>
                 </li>
@@ -836,7 +895,8 @@
                   <a data-toggle="collapse" href="#accordion-list-2" class="collapsed"><span>02</span> Defense & Security <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-2" class="collapse" data-parent=".accordion-list">
                     <p>
-                      Tactical drones, perimeter security systems, anti-intrusion technology, and secure optoelectronics. Strong connections with defense procurement officials and access to government contract opportunities through established PSU relationships.
+
+                       Drones, optoelectronic surveillance, anti-intrusion systems, and government contract routes. Leveraging ADITI Scheme and direct access to defense procurement networks.
                     </p>
                   </div>
                 </li>
@@ -845,16 +905,16 @@
                   <a data-toggle="collapse" href="#accordion-list-3" class="collapsed"><span>03</span> Healthcare Technology <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-3" class="collapse" data-parent=".accordion-list">
                     <p>
-                      Diagnostics equipment, remote monitoring devices, medical device manufacturing, and telemedicine hardware. Access to India's growing healthcare infrastructure and export manufacturing capabilities.
+                     Devices for diagnostics, remote care, and telemedicine with established channel partners across hospitals, clinics, and healthcare networks.
                     </p>
                   </div>
                 </li>
 
                 <li>
-                  <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span> Manufacturing Technology <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <a data-toggle="collapse" href="#accordion-list-4" class="collapsed"><span>04</span> Industrial Technology <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
                   <div id="accordion-list-4" class="collapse" data-parent=".accordion-list">
                     <p>
-                      Industrial fintech solutions, AI/ML for manufacturing optimization, and cybersecurity for operational technology. Leveraging India's digital transformation in manufacturing and Industry 4.0 adoption.
+                     Automation, predictive ML, OT/Cybersecurity solutions leveraging industrial buyers and Public Sector Undertakings (PSUs) for rapid market penetration.
                     </p>
                   </div>
                 </li>
@@ -867,43 +927,33 @@
       </div>
     </section>
 
-    <!-- ======= Value Add Section ======= -->
+    <!-- ======= Track Record Section ======= -->
     <section id="track-record" class="track-record">
       <div class="container">
         <div class="section-title" data-aos="fade-up">
-          <h2>Our Value Add</h2>
-          <p>Comprehensive joint venture facilitation from initial screening to operational manufacturing partnerships in 6-10 weeks</p>
+          <h2>Proven Track Record</h2>
+          <p>We've delivered complex, regulated projects across government and enterprise clients — the same standards and reliability we now offer to North American technology innovators.</p>
         </div>
 
         <div class="row">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="record-item">
               <div class="record-icon">
-                <i class="bx bx-network-chart"></i>
+                <i class="bx bx-building"></i>
               </div>
               <div class="record-content">
-                <h5>Joint Venture Structuring</h5>
-                <p>End-to-end JV negotiation and structuring, including MoU development, partnership agreements, and regulatory compliance for cross-border technology ventures.</p>
+                <h5>Government Program Access</h5>
+                <p>Direct access to ADITI Scheme, Make in India initiatives, and strategic government procurement networks across defense and infrastructure sectors.</p>
               </div>
             </div>
 
             <div class="record-item">
               <div class="record-icon">
-                <i class="bx bx-factory"></i>
+                <i class="bx bx-rocket"></i>
               </div>
               <div class="record-content">
-                <h5>Manufacturing Partner Identification</h5>
-                <p>Access to vetted Indian manufacturing partners and public sector enterprises, with established production capabilities and export infrastructure.</p>
-              </div>
-            </div>
-
-            <div class="record-item">
-              <div class="record-icon">
-                <i class="bx bx-world"></i>
-              </div>
-              <div class="record-content">
-                <h5>Market Entry & Regulatory Navigation</h5>
-                <p>Comprehensive India market entry guidance, regulatory compliance, and supply chain integration support for seamless business operations.</p>
+                <h5>Fast-Track Market Entry</h5>
+                <p>Proven methodology for weeks-to-market deployment through established regulatory relationships and compliance expertise.</p>
               </div>
             </div>
           </div>
@@ -911,31 +961,21 @@
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="record-item">
               <div class="record-icon">
+                <i class="bx bx-network-chart"></i>
+              </div>
+              <div class="record-content">
+                <h5>Strategic Partnerships</h5>
+                <p>Extensive network of distribution partners, system integrators, and channel partners across all four focus sectors.</p>
+              </div>
+            </div>
+
+            <div class="record-item">
+              <div class="record-icon">
                 <i class="bx bx-shield-check"></i>
               </div>
               <div class="record-content">
-                <h5>Government Contract Access</h5>
-                <p>Direct access to defense and infrastructure procurement opportunities through established relationships with PSUs, NTPC, IndianOil, and defense procurement officials.</p>
-              </div>
-            </div>
-
-            <div class="record-item">
-              <div class="record-icon">
-                <i class="bx bx-trending-up"></i>
-              </div>
-              <div class="record-content">
-                <h5>Non-Dilutive Scaling</h5>
-                <p>Partnership-focused growth model that prioritizes capacity building and market access over equity dilution, preserving founder ownership while enabling scale.</p>
-              </div>
-            </div>
-
-            <div class="record-item">
-              <div class="record-icon">
-                <i class="bx bx-export"></i>
-              </div>
-              <div class="record-content">
-                <h5>Export Manufacturing Hub</h5>
-                <p>Leverage India's cost-effective manufacturing base and established export infrastructure to serve global markets, particularly in renewable energy components.</p>
+                <h5>Regulatory Navigation</h5>
+                <p>Proven track record in complex regulatory environments with full compliance capabilities for regulated markets.</p>
               </div>
             </div>
           </div>
@@ -943,50 +983,26 @@
       </div>
     </section>
 
+    
     <!-- ======= Enhanced Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Let's explore a joint venture</h2>
-          <p>Connect with our strategic partnerships team to discuss how we can facilitate your India manufacturing partnership and market entry</p>
+          <h2>Ready to Enter Asian Markets?</h2>
+          <p>Book a strategic consultation or connect with our partnerships team to explore go-to-market opportunities for your North American technology company.</p>
         </div>
 
-        <div class="row">
-  <div class="col-lg-12">
-    <div style="background: linear-gradient(135deg, #47b2e4, #209dd8); padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-      <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; backdrop-filter: blur(10px);">
-        <i class="bx bx-user-circle" style="font-size: 60px; color: white; margin-bottom: 20px;"></i>
-        <h3 style="color: white; margin-bottom: 10px; font-weight: 600;">Strategic Partnerships</h3>
-        <h3 style="color: white; margin-bottom: 10px; font-weight: 600;">dipam@taiyoml.com</h3>
-        <h4 style="color: white; margin-bottom: 5px; font-size: 22px;">Dipam Acharyya</h4>
-        <p style="color: rgba(255,255,255,0.9); margin-bottom: 15px; font-size: 16px;">Director of Strategic Partnerships</p>
-        <a href="https://calendly.com/dipam-taiyoml/catalyst-fund-india-connect" style="background: white; color: #37517e; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 10px; transition: all 0.3s;">
-          <i class="bx bx-calendar" style="margin-right: 8px;"></i>
-          Meet with Team 
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
-        <div class="row mt-4">
-          <div class="col-lg-12 text-center">
-            <div class="contact-card">
-              <h3>Investment Profile & Timeline</h3>
-              <p style="margin-bottom: 20px; color: rgba(255,255,255,0.9);">
-                <strong>Target:</strong> US-based, hardware-centric technology companies (post-prototype, pre-mass scale)<br>
-                <strong>Focus:</strong> No existing India JV operations, seeking manufacturing partnerships<br>
-                <strong>Timeline:</strong> 6-10 weeks from introduction to operational joint venture<br>
-                <strong>Ticket Size:</strong> Partnership facilitation value $500K-$20M+ (project dependent)
-              </p>
-              <a href="https://calendly.com/dipam-taiyoml/catalyst-fund-india-connect" class="btn-primary-cta">
-                <i class="bx bx-calendar"></i>
-                Schedule Partnership Call
-              </a>
+               <div class="row">
+          <div class="col-lg-6">
+            <div class="info">
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Strategic Partnerships:</h4>
+                <p><a href="mailto:dipam@taiyoml.com">Dipam Acharyya, Director Strategic Partnerships</a></p>
+                <p>dipam@taiyoml.com</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
     </section>
   </main>
 
@@ -996,10 +1012,7 @@
       <div class="credits">
         <div class="col-lg-3 col-md-6 footer-contact">
           <h3>Catalyst Investment Fund</h3>
-          <p style="color: #ffffff;">Strategic US-India Technology Joint Venture</p>
-          <p style="color: rgba(255,255,255,0.7); margin-top: 15px; font-size: 14px;">
-            Facilitating partnerships between US technology innovators and Indian manufacturing excellence
-          </p>
+          <p style="color: #ffffff;">A TaiyoML Company</p>
         </div>
         <p style="color: #ffffff; margin-top: 20px;">
           © 2024 <a href="https://catalystfund.com/" style="color: #47b2e4;">Catalyst Investment Fund</a>. All rights reserved.

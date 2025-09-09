@@ -66,76 +66,7 @@
       position: relative;
       z-index: 3;
     }
-#hero {
-  background: #37517e;
-  min-height: 100vh;
-  padding: 80px 0;
-  position: relative;
-}
 
-#hero .container {
-  position: relative;
-  z-index: 2;
-}
-
-/* Ensure content doesn't get cut off */
-#hero .row {
-  min-height: calc(100vh - 160px);
-}
-
-/* Hero image positioning */
-.hero-img {
-  position: relative;
-}
-
-/* Mobile adjustments */
-@media (max-width: 991.98px) {
-  #hero {
-    padding: 60px 0;
-    min-height: auto;
-  }
-  
-  #hero .row {
-    min-height: auto;
-  }
-  
-  #hero .col-lg-6:first-child {
-    margin-bottom: 2rem;
-  }
-  
-  .hero-sidebar {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    margin-top: 1rem;
-  }
-}
-
-/* Desktop specific adjustments */
-@media (min-width: 992px) {
-  #hero {
-    overflow: visible;
-  }
-  
-  .hero-sidebar {
-    background: rgba(55, 81, 126, 0.9);
-    color: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    right: 20px;
-    z-index: 3;
-  }
-  
-  .hero-sidebar h4 {
-    color: white;
-    margin-bottom: 1.5rem;
-  }
-}
     .trust-badges {
       display: flex;
       flex-wrap: wrap;
@@ -285,26 +216,25 @@
     }
 
     .btn-learn-more {
-  background: #47b2e4 !important;
-  color: white !important;
-  padding: 12px 30px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 16px;
-  transition: all 0.3s;
-  display: inline-flex;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.btn-learn-more:hover {
-  background: #209dd8 !important;
-  text-decoration: none;
-  color: white !important;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
+      background: #47b2e4;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    
+    .btn-learn-more:hover {
+      background: #209dd8;
+      text-decoration: none;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
 
     /* Enhanced Sectors Section */
     #sectors {
@@ -368,119 +298,114 @@
       line-height: 1.5;
     }
 
-  /* Enhanced Contact Section */
-#contact {
-  padding: 80px 0;
-  background: #37517e;
-  color: white;
-}
+    /* Enhanced Contact Section */
+    #contact {
+      padding: 80px 0;
+      background: #37517e;
+      color: white;
+    }
 
-#contact .section-title h2 {
-  color: white;
-}
+    #contact .section-title h2 {
+      color: white;
+    }
 
-#contact .section-title h2::before {
-  background: rgba(255, 255, 255, 0.2);
-}
+    #contact .section-title h2::before {
+      background: rgba(255, 255, 255, 0.2);
+    }
 
-#contact .section-title h2::after {
-  background: #47b2e4;
-}
+    #contact .section-title h2::after {
+      background: #47b2e4;
+    }
 
-#contact .section-title p {
-  color: rgba(255,255,255,0.8);
-}
+    #contact .section-title p {
+      color: rgba(255,255,255,0.8);
+    }
 
-.contact-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  padding: 50px 40px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
+    .contact-card {
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 50px 40px;
+      backdrop-filter: blur(15px);
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
 
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-  transform: rotate(-45deg);
-  transition: all 0.6s ease;
-}
+    .contact-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+      transform: rotate(-45deg);
+      transition: all 0.6s ease;
+    }
 
-.contact-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
-  border-color: rgba(71, 178, 228, 0.5);
-}
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+      border-color: rgba(71, 178, 228, 0.5);
+    }
 
-.contact-card:hover::before {
-  transform: rotate(-45deg) translate(50%, 50%);
-}
+    .contact-card:hover::before {
+      transform: rotate(-45deg) translate(50%, 50%);
+    }
 
-#contact .info .contact-item {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
-  padding: 40px 30px;
-  text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  position: relative;
-  z-index: 1;
-  margin-bottom: 30px;
-}
+    .info .contact-item {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 16px;
+      padding: 40px 30px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 30px;
+    }
 
-#contact .info .contact-item i {
-  font-size: 48px;
-  color: #47b2e4;
-  margin-bottom: 20px;
-  background: rgba(71, 178, 228, 0.1);
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid rgba(71, 178, 228, 0.2);
-}
+    .info .contact-item i {
+      font-size: 48px;
+      color: #47b2e4;
+      margin-bottom: 20px;
+      background: rgba(71, 178, 228, 0.1);
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid rgba(71, 178, 228, 0.2);
+    }
 
-#contact .info .contact-item h4 {
-  color: #ffffff !important;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 24px;
-}
+    .info .contact-item h4 {
+      color: white;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 24px;
+    }
 
-#contact .info .contact-item p {
-  color: #ffffff !important;
-  margin-bottom: 12px;
-  font-size: 16px;
-  line-height: 1.6;
-}
+    .info .contact-item p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 1.6;
+    }
 
-#contact .info .contact-item p strong {
-  color: #ffffff !important;
-  font-weight: 600;
-}
+    .info .contact-item a {
+      color: #47b2e4;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      transition: all 0.3s ease;
+    }
 
-#contact .info .contact-item a {
-  color: #47b2e4 !important;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 18px;
-  transition: all 0.3s ease;
-}
-
-#contact .info .contact-item a:hover {
-  color: #ffffff !important;
-  text-decoration: none;
-}
+    .info .contact-item a:hover {
+      color: white;
+      text-decoration: none;
+    }
 
     /* Header Enhancements */
     #header {
@@ -707,66 +632,67 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="#contact" class="get-started-btn scrollto">Get Started</a>
+      <a href="#about" class="get-started-btn scrollto">Get Started</a>
     </div>
   </header>
 
   <!-- ======= Enhanced Hero Section ======= -->
-<section id="hero" class="d-flex align-items-center">
-  <div class="container">
-    <!-- Move background image to CSS background instead of inline img -->
-    <div class="row align-items-center min-vh-100">
-      
-      <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-        <h1>Strategic US-India Technology Joint Venture</h1>
-        <h2>We facilitate partnerships between innovative US technology companies and established Indian manufacturing partners, enabling scale-up without dilution.</h2>
-
-        <div class="trust-badges">
-          <span class="trust-badge">🤝 Joint Venture Structuring</span>
-          <span class="trust-badge">🏭 Manufacturing Scale-Up</span>
-          <span class="trust-badge">💰 Non-Dilutive Capital</span>
-          <span class="trust-badge">🌍 Export Manufacturing</span>
-          <span class="trust-badge">🔋 Renewables Focus</span>
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
+          
+      <div class="row align-items-center">
+        
+        <div class="col-lg-6 order-1 order-lg-1 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          
+          <div class="hero-sidebar">
+            <h4>Our JV Approach</h4>
+            <div class="approach-item">
+              <span>Timeline:</span>
+              <strong> 6-18 Weeks to JV</strong>
+            </div>
+            <div class="approach-item">
+              <span>Capital:</span>
+              <strong> Non-Dilutive Scaling</strong>
+            </div>
+            <div class="approach-item">
+              <span>Manufacturing:</span>
+              <strong> Cost-Effective Partners</strong>
+            </div>
+            <div class="approach-item">
+              <span>Export Capabilities:</span>
+              <strong> Global</strong>
+            </div>
+          </div>
         </div>
 
-        <div class="cta-buttons">
-          <a href="#contact" class="btn-primary-cta">
-            <i class="bx bx-phone"></i>
-            Schedule Partnership Call
-          </a>
-          <a href="#about" class="btn-secondary-cta">
-            <i class="bx bx-info-circle"></i>
-            About Catalyst
-          </a>
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-2" data-aos="fade-up" data-aos-delay="200">
+          <h1>Strategic US-India Technology Joint Ventures</h1>
+          <h2>We facilitate partnerships between innovative US technology companies and established Indian manufacturing partners, enabling scale-up without dilution.</h2>
+
+          <div class="trust-badges">
+            <span class="trust-badge">🤝 Joint Venture Structuring</span>
+            <span class="trust-badge">🏭 Manufacturing Scale-Up</span>
+            <span class="trust-badge">💰 Non-Dilutive Capital</span>
+            <span class="trust-badge">🌍 Export Manufacturing</span>
+            <span class="trust-badge">🔋 Renewables Focus</span>
+          </div>
+
+          <div class="cta-buttons">
+            <a href="#contact" class="btn-primary-cta">
+              <i class="bx bx-phone"></i>
+              Schedule Partnership Call
+            </a>
+            <a href="#about" class="btn-secondary-cta">
+              <i class="bx bx-info-circle"></i>
+              Learn About JVs
+            </a>
+          </div>
         </div>
       </div>
-
-      <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-        <img src="assets/img/why-us.png" class="img-fluid animated" alt="">
-        <div class="hero-sidebar">
-          <h4>Our JV Approach</h4>
-          <div class="approach-item">
-            <span>Timeline:</span>
-            <strong> 6-18 Weeks to JV</strong>
-          </div>
-          <div class="approach-item">
-            <span>Capital:</span>
-            <strong> Non-Dilutive Scaling</strong>
-          </div>
-          <div class="approach-item">
-            <span>Manufacturing:</span>
-            <strong> Cost-Effective Partners</strong>
-          </div>
-          <div class="approach-item">
-            <span>Export Capabilities:</span>
-            <strong> Global</strong>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
+    
+  </section>
 
   <main id="main">
     <!-- ======= About Section ======= -->
@@ -799,13 +725,12 @@
               <li><i class="ri-check-double-line"></i> Government & PSU access</li>
               <li><i class="ri-check-double-line"></i> Non-dilutive scaling solutions</li>
             </ul>
-          <div style="margin-top: 30px;">
+            <div style="margin-top: 30px;">
               <a href="#contact" class="btn-learn-more">
                 <i class="bx bx-phone" style="margin-right: 8px;"></i>
                 Discuss Your JV Opportunity
               </a>
             </div>
-
           </div>
         </div>
       </div>
@@ -947,28 +872,36 @@
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
-          <h2>Let's explore a joint venture</h2>
+          <h2>Ready to Explore Joint Ventures?</h2>
           <p>Connect with our strategic partnerships team to discuss how we can facilitate your India manufacturing partnership and market entry</p>
         </div>
 
         <div class="row">
-  <div class="col-lg-12">
-    <div style="background: linear-gradient(135deg, #47b2e4, #209dd8); padding: 40px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
-      <div style="background: rgba(255,255,255,0.1); padding: 30px; border-radius: 10px; backdrop-filter: blur(10px);">
-        <i class="bx bx-user-circle" style="font-size: 60px; color: white; margin-bottom: 20px;"></i>
-        <h3 style="color: white; margin-bottom: 10px; font-weight: 600;">Strategic Partnerships</h3>
-        <h3 style="color: white; margin-bottom: 10px; font-weight: 600;">dipam@taiyoml.com</h3>
-        <h4 style="color: white; margin-bottom: 5px; font-size: 22px;">Dipam Acharyya</h4>
-        <p style="color: rgba(255,255,255,0.9); margin-bottom: 15px; font-size: 16px;">Director of Strategic Partnerships</p>
-        <a href="https://calendly.com/dipam-taiyoml/catalyst-fund-india-connect" style="background: white; color: #37517e; padding: 12px 25px; border-radius: 25px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 10px; transition: all 0.3s;">
-          <i class="bx bx-calendar" style="margin-right: 8px;"></i>
-          Meet with Team 
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
+          <div class="col-lg-6">
+            <div class="info">
+              <div class="contact-item">
+                <i class="icofont-businessman"></i>
+                <h4>Strategic Partnerships</h4>
+                <p><strong>Dipam Acharyya</strong></p>
+                <p>Director Strategic Partnerships</p>
+                <p><a href="mailto:dipam@taiyoml.com">dipam@taiyoml.com</a></p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="info">
+              <div class="contact-item">
+                <i class="icofont-building-alt"></i>
+                <h4>Indian Operations</h4>
+                <p><strong>Mr. Vinod Bengani</strong></p>
+                <p>Managing Partner – Indian Operations</p>
+                <p>Kolkata & Delhi Operations</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div class="row mt-4">
           <div class="col-lg-12 text-center">
             <div class="contact-card">
@@ -977,11 +910,11 @@
                 <strong>Target:</strong> US-based, hardware-centric technology companies (post-prototype, pre-mass scale)<br>
                 <strong>Focus:</strong> No existing India JV operations, seeking manufacturing partnerships<br>
                 <strong>Timeline:</strong> 6-10 weeks from introduction to operational joint venture<br>
-                <strong>Ticket Size:</strong> Partnership facilitation value $500K-$20M+ (project dependent)
+                <strong>Ticket Size:</strong> Partnership facilitation value $500K-$3M (project dependent)
               </p>
-              <a href="https://calendly.com/dipam-taiyoml/catalyst-fund-india-connect" class="btn-primary-cta">
+              <a href="mailto:dipam@taiyoml.com" class="btn-primary-cta">
                 <i class="bx bx-calendar"></i>
-                Schedule Partnership Call
+                Schedule Partnership Discussion
               </a>
             </div>
           </div>
@@ -996,7 +929,7 @@
       <div class="credits">
         <div class="col-lg-3 col-md-6 footer-contact">
           <h3>Catalyst Investment Fund</h3>
-          <p style="color: #ffffff;">Strategic US-India Technology Joint Venture</p>
+          <p style="color: #ffffff;">Strategic US-India Technology Joint Ventures</p>
           <p style="color: rgba(255,255,255,0.7); margin-top: 15px; font-size: 14px;">
             Facilitating partnerships between US technology innovators and Indian manufacturing excellence
           </p>
