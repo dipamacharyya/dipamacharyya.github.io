@@ -13,7 +13,7 @@
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Google Fonts arraghhhh-->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
@@ -29,326 +29,31 @@
   <link href="assets/css/style.css" rel="stylesheet">
   
   <style>
-    .theme-toggle-btn {
-      background: transparent;
-      border: 2px solid rgba(255, 255, 255, 0.3);
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      cursor: pointer;
+    .btn-learn-more {
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: all 0.3s;
+      display: inline-block;
+      margin-top: 20px;
     }
     
-    .theme-toggle-btn:hover {
-      background: rgba(255, 255, 255, 0.1);
-      border-color: rgba(255, 255, 255, 0.5);
-      transform: scale(1.1);
+    .btn-learn-more:hover {
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     }
     
-    .theme-toggle-btn:focus {
-      outline: none;
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+    .contact-card {
+      max-width: 600px;
+      margin: 0 auto;
     }
     
-    @media (max-width: 768px) {
-      .header-controls {
-        margin-left: auto;
-      }
-      
-      .nav-menu {
-        display: none !important;
-      }
+    .footer-content {
+      padding: 40px 0;
     }
-    
-    /* Dark mode styles */
-    body.dark-mode {
-      background-color: #1a1a1a;
-      color: #e0e0e0;
-    }
-    
-    .dark-mode #header {
-      background: rgba(26, 26, 26, 0.95);
-      border-bottom: 1px solid #333;
-    }
-    
-    .dark-mode .logo a {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .nav-menu ul li a {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .nav-menu ul li a:hover,
-    .dark-mode .nav-menu ul li.active a {
-      color: #007bff;
-    }
-    
-    .dark-mode .get-started-btn {
-      background: #007bff;
-      color: white;
-      border: 2px solid #007bff;
-    }
-    
-    .dark-mode .get-started-btn:hover {
-      background: #0056b3;
-      border-color: #0056b3;
-    }
-    
-    .dark-mode #hero {
-      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-    }
-    
-    .dark-mode #hero h1,
-    .dark-mode #hero h2 {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .section-bg {
-      background-color: #242424;
-    }
-    
-    .dark-mode .about,
-    .dark-mode .contact {
-      background-color: #1a1a1a;
-    }
-    
-    .dark-mode .section-title h2 {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .section-title p {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .content p,
-    .dark-mode .content h3,
-    .dark-mode .content h5 {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .why-us .content {
-      background: #2d2d2d;
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .accordion-list li {
-      background: #2d2d2d;
-      border: 1px solid #444;
-    }
-    
-    .dark-mode .accordion-list li a {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .accordion-list li a:hover,
-    .dark-mode .accordion-list li a.collapse {
-      background: #007bff;
-      color: white;
-    }
-    
-    .dark-mode .accordion-list div {
-      background: #2d2d2d;
-      border: 1px solid #444;
-      border-top: none;
-    }
-    
-    .dark-mode .accordion-list p {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .icon-box {
-      background: #2d2d2d;
-      border: 1px solid #444;
-    }
-    
-    .dark-mode .icon-box h4 a {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .icon-box p {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .contact .info {
-      background: #2d2d2d;
-      border: 1px solid #444;
-    }
-    
-    .dark-mode .contact .info h4 {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .contact .info p {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .contact .info a {
-      color: #007bff;
-    }
-    
-    .dark-mode .contact .info a:hover {
-      color: #0056b3;
-    }
-    
-    .dark-mode #footer {
-      background: #0f0f0f;
-      color: #e0e0e0;
-    }
-    
-    .dark-mode #footer .footer-top,
-    .dark-mode #footer .footer-bottom {
-      background: #0f0f0f;
-    }
-    
-    .dark-mode #footer .footer-contact h3 {
-      color: #e0e0e0;
-    }
-    
-    .dark-mode #footer .footer-contact p {
-      color: #b0b0b0;
-    }
-    
-    .dark-mode .credits a {
-      color: #007bff;
-    }
-    
-    .dark-mode .theme-toggle-btn {
-      border-color: rgba(224, 224, 224, 0.3);
-      color: #e0e0e0;
-    }
-    
-    .dark-mode .theme-toggle-btn:hover {
-      background: rgba(224, 224, 224, 0.1);
-      border-color: rgba(224, 224, 224, 0.5);
-    }
-
-/* Mobile hamburger menu styles */
-.mobile-nav-toggle {
-  color: #fff;
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
-}
-
-.mobile-nav {
-  position: fixed;
-  top: 0;
-  right: -260px;
-  width: 260px;
-  height: 100vh;
-  background: rgba(40, 58, 90, 0.95);
-  overflow-y: auto;
-  transition: 0.3s;
-  z-index: 9999;
-  backdrop-filter: blur(10px);
-  padding-top: 80px;
-}
-
-.mobile-nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.mobile-nav a {
-  display: block;
-  color: #fff;
-  padding: 15px 20px;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-nav a:hover {
-  color: #47b2e4;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.mobile-nav .active a {
-  color: #47b2e4;
-}
-
-.mobile-nav-overly {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: 9998;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.6);
-  display: none;
-}
-
-.mobile-nav-active .mobile-nav {
-  right: 0;
-}
-
-.mobile-nav-active .mobile-nav-overly {
-  display: block;
-}
-
-.mobile-theme-toggle {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  margin-top: 20px;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.mobile-theme-toggle span {
-  color: #fff;
-  font-weight: 500;
-}
-
-.mobile-get-started {
-  padding: 15px 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.mobile-get-started a {
-  background: #007bff;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 4px;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  border: none;
-}
-
-@media (max-width: 768px) {
-  .header-controls {
-    display: none;
-  }
-  
-  .mobile-nav-toggle {
-    display: block;
-    margin-left: auto;
-  }
-  
-  /* Fix blue highlight on mobile accordion */
-  .accordion-list li a {
-    -webkit-tap-highlight-color: transparent;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
-  }
-  
-  .accordion-list li a:focus {
-    outline: none;
-    box-shadow: none;
-  }
-}
-
   </style>
 </head>
 
@@ -369,12 +74,7 @@
        </ul>
       </nav><!-- .nav-menu -->
 
-      <div class="header-controls d-flex align-items-center">
-        <a href="#about" class="get-started-btn scrollto mr-3">Get Started</a>
-        <button id="theme-toggle" class="theme-toggle-btn">
-          <i class="icofont-moon" id="theme-icon"></i>
-        </button>
-      </div>
+      <a href="#about" class="get-started-btn scrollto">Get Started</a>
 
     </div>
   </header><!-- End Header -->
@@ -415,7 +115,7 @@
 
              <br><br>
 
-		Our deep government connections and understanding of programs like ADITI enable fast-track market access while cutting through regulatory hurdles. We prioritize go-to-market strategies over manufacturing, helping companies establish sales channels and customer relationships first.
+		Our deep government connections and understanding of strategic programs enable fast-track market access while cutting through regulatory hurdles. We prioritize go-to-market strategies over manufacturing, helping companies establish sales channels and customer relationships first.
 		
 		<br><br>
 		
@@ -618,34 +318,6 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
-  <script>
-    // Dark mode toggle functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const themeToggle = document.getElementById('theme-toggle');
-      const themeIcon = document.getElementById('theme-icon');
-      const body = document.body;
-      
-      // Check for saved theme preference or default to light mode
-      const currentTheme = localStorage.getItem('theme') || 'light';
-      if (currentTheme === 'dark') {
-        body.classList.add('dark-mode');
-        themeIcon.className = 'icofont-sun';
-      }
-      
-      themeToggle.addEventListener('click', function() {
-        body.classList.toggle('dark-mode');
-        
-        if (body.classList.contains('dark-mode')) {
-          themeIcon.className = 'icofont-sun';
-          localStorage.setItem('theme', 'dark');
-        } else {
-          themeIcon.className = 'icofont-moon';
-          localStorage.setItem('theme', 'light');
-        }
-      });
-    });
-  </script>
 
 </body>
 
