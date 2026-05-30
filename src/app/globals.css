@@ -1,0 +1,110 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * TaiyoML design tokens
+ *
+ * Brand origins (from internal LaTeX brand color definitions):
+ *   primary blue  RGB(20, 90, 150)  -> #145A96
+ *   accent teal   RGB(0, 128, 90)   -> #00805A
+ *
+ * Inspiration set: Sequoia, a16z, Index Ventures, Founders Fund, Stripe, Mercury.
+ * Editorial typography (serif display + geometric sans body), generous whitespace,
+ * monochrome-with-accent palette.
+ */
+
+@theme {
+  /* Brand */
+  --color-taiyo-50:  #f0f6fb;
+  --color-taiyo-100: #dceaf4;
+  --color-taiyo-200: #b8d4e9;
+  --color-taiyo-300: #8eb8d8;
+  --color-taiyo-400: #5e95c0;
+  --color-taiyo-500: #3a76a8;
+  --color-taiyo-600: #2a6394;
+  --color-taiyo-700: #1f527e;
+  --color-taiyo-800: #194365;
+  --color-taiyo-900: #145a96;
+  --color-taiyo-950: #0a2d4c;
+
+  --color-accent-50:  #ecfdf6;
+  --color-accent-100: #d1fae8;
+  --color-accent-200: #a7f3d3;
+  --color-accent-300: #6ee7b9;
+  --color-accent-400: #34d39a;
+  --color-accent-500: #10b981;
+  --color-accent-600: #059669;
+  --color-accent-700: #047857;
+  --color-accent-800: #00805a;
+  --color-accent-900: #064e3b;
+
+  /* Neutrals - warm, paper-like, not cold gray */
+  --color-paper-50:  #fbfaf8;
+  --color-paper-100: #f5f3ee;
+  --color-paper-200: #ebe7df;
+  --color-paper-300: #d8d2c5;
+  --color-paper-400: #a8a190;
+  --color-paper-500: #7a7363;
+  --color-paper-600: #57513f;
+  --color-paper-700: #3d382b;
+  --color-paper-800: #28251c;
+  --color-paper-900: #1a1812;
+  --color-paper-950: #0d0c08;
+
+  /* Surface tokens (light mode defaults) */
+  --color-background: var(--color-paper-50);
+  --color-foreground: var(--color-paper-900);
+  --color-muted:      var(--color-paper-500);
+  --color-border:     var(--color-paper-200);
+  --color-card:       #ffffff;
+
+  /* Typography */
+  --font-display: var(--font-instrument-serif);
+  --font-sans:    var(--font-geist-sans);
+  --font-mono:    var(--font-geist-mono);
+
+  /* Container */
+  --container-content: 72rem;
+
+  /* Animation */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  /* Editorial serif for display headings */
+  .font-display {
+    font-family: var(--font-display), Georgia, serif;
+    font-feature-settings: "liga", "dlig";
+    letter-spacing: -0.01em;
+  }
+
+  /* Selection styling reinforces brand */
+  ::selection {
+    background: var(--color-taiyo-900);
+    color: var(--color-paper-50);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
